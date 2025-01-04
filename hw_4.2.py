@@ -6,10 +6,13 @@ lst = [1, 3, 5]
 lst = [6]
 lst = []
 num = 0
-if not lst:
-   print(0)
-else:
-   for i,v in enumerate(lst):
-      if i % 2 == 0:
-         num += v
-   print(num * lst[-1])
+
+# if not lst:
+#    print(0)
+# else:
+#    for i,v in enumerate(lst):
+#       if i % 2 == 0:
+#          num += v
+#    print(num * lst[-1])
+
+print(0 if not lst else sum(lst[::2]) * lst[-1])
