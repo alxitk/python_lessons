@@ -7,7 +7,7 @@ while user_input == 'y':
         result = number_1 * number_2
     elif operator == '/':
         if number_2 == 0:
-            result = "Division by zero"     # Исправить при выводе результата
+            result = "Division by zero"
         else:
             result = number_1 / number_2
     elif operator == '+':
