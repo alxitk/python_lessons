@@ -14,7 +14,7 @@ while user_input == 'y':
         result = number_1 + number_2
     elif operator == '-':
         result = number_1 - number_2
-    print(result if number_2 == 0 else f"{number_1} {operator} {number_2} = {result}")
+    print(result if (number_2 == 0 and operator == '/') else f"{number_1} {operator} {number_2} = {result}")
     user_input = input('Start calculate again?: y/n ').lower()
 
 
