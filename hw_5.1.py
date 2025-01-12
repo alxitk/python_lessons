@@ -5,6 +5,7 @@ import string
 
 # user_input = '__name'
 # user_input = '__double__twice'
+# user_input = 'within__name'
 # user_input = '_'
 # user_input = '__'
 # user_input = '___'
@@ -34,7 +35,9 @@ if user_input:
             user_input in keyword.kwlist):
         result = False
 
-    if user_input.startswith('__') and user_input.count('__') > 1:
+    if (user_input.startswith('__') and
+            user_input.count('__') > 1 or
+            '__' in user_input[2:]):
         result = False
 
     if user_input == '_':
