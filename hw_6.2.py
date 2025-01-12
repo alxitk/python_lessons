@@ -1,6 +1,6 @@
 # HW 6.2. Конвертер із числа в дату
 
-user_input = 0
+# user_input = 0
 # user_input = 224930
 # user_input = 466289
 # user_input = 950400
@@ -10,9 +10,10 @@ user_input = 0
 # user_input = 22493
 # user_input = 7948799
 
-VALID_RANGE = range(0, 8640000)
+user_input = int(input("Enter a number from the range 0 to 8640000: "))
+valid_range = range(0, 8640000)
 user_input_copy = user_input
-invalid_input_message = "Enter a number from the range 0 to 8640000"
+invalid_input_message = "The number you entered is out of range"
 
 DAYS_WORD_FORM = ('днів', 'дні', 'день')
 SECONDS_IN_TIME_UNITS = {
@@ -44,4 +45,4 @@ else:
 
 result = f"{days} {day_word_form}, {':'.join(unformatted_time)}"
 
-print(result if user_input in VALID_RANGE else invalid_input_message)
+print(result if user_input in valid_range else invalid_input_message)

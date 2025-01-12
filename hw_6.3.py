@@ -1,13 +1,14 @@
 # HW 6.3. Добуток чисел
 
-user_input = 999
+# user_input = 999
 # user_input = 1000
 # user_input = 423
 # user_input = 33
 # user_input = 25
 # user_input = 1
+user_input = int(input("Enter an integer: "))
 
-invalid_input_message = "Enter an integer"
+invalid_input_message = "You entered a non-integer"
 
 if isinstance(user_input, int):
     digits_product = user_input

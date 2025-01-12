@@ -3,7 +3,8 @@
 import keyword
 import string
 
-user_input = '__name'
+# user_input = '__name'
+# user_input = '__double__twice'
 # user_input = '_'
 # user_input = '__'
 # user_input = '___'
@@ -20,25 +21,25 @@ user_input = '__name'
 # user_input ='assert'
 # user_input = 'assert_exception'
 
+result = True
+user_input = input('Enter a variable name: ')
+
 if user_input:
+    for i in user_input:
+        if i in string.punctuation.replace('_', ' '):
+            result = False
 
-    if (user_input == '_' or
-            (user_input.startswith('__') and len(user_input) > 2 and user_input[2].isalpha())):
-        result = True
-
-    elif (user_input[0].isdigit() or
-          user_input in keyword.kwlist or
-          '__' in user_input or
-          not user_input.islower()):
+    if (user_input[0].isdigit() or
+            not user_input.islower() or
+            user_input in keyword.kwlist):
         result = False
 
-    else:
+    if user_input.startswith('__') and user_input.count('__') > 1:
+        result = False
+
+    if user_input == '_':
         result = True
 else:
     result = False
-
-for i in user_input:
-    if i in string.punctuation.replace('_', ' '):
-        result = False
 
 print(result)
