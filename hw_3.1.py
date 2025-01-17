@@ -4,16 +4,16 @@ number_1 = int(input("Enter a number: "))
 number_2 = int(input("Enter a second number: "))
 operator = input("Enter the arithmetic operator: ")
 
-if operator == '*':
+if operator == "*":
     result = number_1 * number_2
-elif operator == '/':
+elif operator == "/":
     if number_2 == 0:
         result = "Division by zero"
     else:
         result = number_1 / number_2
-elif operator == '+':
+elif operator == "+":
     result = number_1 + number_2
-elif operator == '-':
+elif operator == "-":
     result = number_1 - number_2
 
 print(result)

@@ -15,11 +15,11 @@ valid_range = range(0, 8640000)
 user_input_copy = user_input
 invalid_input_message = "The number you entered is out of range"
 
-DAYS_WORD_FORM = ('днів', 'дні', 'день')
+DAYS_WORD_FORM = ("днів", "дні", "день")
 SECONDS_IN_TIME_UNITS = {
-    'seconds_in_day': 86400,
-    'seconds_in_hour': 3600,
-    'seconds_in_minute': 60
+    "seconds_in_day": 86400,
+    "seconds_in_hour": 3600,
+    "seconds_in_minute": 60,
 }
 
 unformatted_time = []

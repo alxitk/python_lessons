@@ -23,24 +23,28 @@ import string
 # user_input = 'assert_exception'
 
 result = True
-user_input = input('Enter a variable name: ')
+user_input = input("Enter a variable name: ")
 
 if user_input:
     for i in user_input:
-        if i in string.punctuation.replace('_', ' '):
+        if i in string.punctuation.replace("_", " "):
             result = False
 
-    if (user_input[0].isdigit() or
-            not user_input.islower() or
-            user_input in keyword.kwlist):
+    if (
+        user_input[0].isdigit()
+        or not user_input.islower()
+        or user_input in keyword.kwlist
+    ):
         result = False
 
-    if (user_input.startswith('__') and
-            user_input.count('__') > 1 or
-            '__' in user_input[2:]):
+    if (
+        user_input.startswith("__")
+        and user_input.count("__") > 1
+        or "__" in user_input[2:]
+    ):
         result = False
 
-    if user_input == '_':
+    if user_input == "_":
         result = True
 else:
     result = False

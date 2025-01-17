@@ -11,14 +11,10 @@ new_lst = []
 if not lst:
     new_lst = [[], []]
 elif len(lst) % 2 == 0:
-    new_lst.append(lst[:int(len(lst) / 2)])
-    new_lst.append(lst[int(len(lst) / 2):])
+    new_lst.append(lst[: int(len(lst) / 2)])
+    new_lst.append(lst[int(len(lst) / 2) :])
 else:
-    new_lst.append(lst[:(len(lst) // 2) + 1])
-    new_lst.append(lst[(len(lst) // 2) + 1:])
+    new_lst.append(lst[: (len(lst) // 2) + 1])
+    new_lst.append(lst[(len(lst) // 2) + 1 :])
 
 print(new_lst)
-
-
-
-
