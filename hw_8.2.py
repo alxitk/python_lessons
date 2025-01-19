@@ -7,6 +7,7 @@ def is_palindrome(text):
     for i in range(len(text)):
         if text[i] != text[-(i + 1)]:
             result = False
+            break
 
     return result
 

@@ -4,10 +4,9 @@ from collections import Counter
 
 
 def find_unique_value(some_list):
-    some_list_copy = Counter(some_list)
-    for i, v in some_list_copy.items():
-        if v == 1:
-            return i
+    value_counts = Counter(some_list).most_common()[-1]
+    unique_value = value_counts[0] if value_counts[1] == 1 else None
+    return unique_value
 
 
 assert find_unique_value([1, 2, 1, 1]) == 2, "Test1"

@@ -1,7 +1,8 @@
 # HW 8.1. Додати 1 до числа
 def add_one(some_list):
-    some_list_copy = int("".join(str(i) for i in some_list)) + 1
-    result = [int(i) for i in str(some_list_copy)]
+    int_from_list = int("".join(str(i) for i in some_list))
+    int_from_list += 1
+    result = [int(i) for i in str(int_from_list)]
     return result
 
 
